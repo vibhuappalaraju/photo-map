@@ -57,6 +57,7 @@ class LocationsViewController: UIViewController, UITableViewDelegate, UITableVie
 
         let lat = venue.value(forKeyPath: "location.lat") as! NSNumber
         let lng = venue.value(forKeyPath: "location.lng") as! NSNumber
+        self.delegate.locationsPickedLocation(controller: self, latitude: lat, longitude: lng)
 
         let latString = "\(lat)"
         let lngString = "\(lng)"
